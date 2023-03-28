@@ -1,1 +1,2 @@
-require("rusith/remap")
+require("rusith.set")
+require("rusith.remap")

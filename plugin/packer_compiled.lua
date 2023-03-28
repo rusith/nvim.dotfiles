@@ -33,6 +33,7 @@ local function save_profiles(threshold)
   local sorted_times = {}
   for chunk_name, time_taken in pairs(profile_info) do
     sorted_times[#sorted_times + 1] = {chunk_name, time_taken}
+
   end
   table.sort(sorted_times, function(a, b) return a[2] > b[2] end)
   local results = {}
