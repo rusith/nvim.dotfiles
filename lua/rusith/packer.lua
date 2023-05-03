@@ -9,13 +9,11 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
-  vim.cmd('colorscheme rose-pine')
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use("tpope/vim-fugitive")
-  use("nvim-treesitter/nvim-treesitter-context");
+  use("nvim-treesitter/nvim-treesitter-context")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -23,6 +21,7 @@ return require('packer').startup(function(use)
 	  requires = {
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
+      {'simrat39/rust-tools.nvim'},
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
 
@@ -33,6 +32,9 @@ return require('packer').startup(function(use)
       {'saadparwaiz1/cmp_luasnip'},
       {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
+      {'hrsh7th/cmp-nvim-lsp-signature-help'},
+      {'hrsh7th/cmp-vsnip'},
+      {'hrsh7th/vim-vsnip'},
 
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
@@ -41,4 +43,6 @@ return require('packer').startup(function(use)
   }
 
   use("github/copilot.vim")
+  use("christoomey/vim-tmux-navigator")
+  use { "catppuccin/nvim", as = "catppuccin" }
 end)
